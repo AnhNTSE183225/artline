@@ -1,0 +1,9 @@
+.menu {
+    border-right: none !important;
+}
+
+.icon {
+    width: 20px;
+    height: 16px;
+    margin-right: 5px;
+}

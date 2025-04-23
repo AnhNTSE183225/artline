@@ -1,0 +1,19 @@
+.profile {
+    width: 100%;
+    margin: 30px 10px;
+}
+
+.profileText {
+    gap: 1px;
+}
+
+.professionText {
+    font-size: 10px;
+    opacity: 32%;
+}
+
+.header {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
