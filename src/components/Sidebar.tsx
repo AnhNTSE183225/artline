@@ -2,11 +2,11 @@ import { Menu } from 'antd';
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router'
 import s from './sidebar.module.css';
-import pipelineIcon from '../assets/Pipeline.svg';
-import meetingIcon from '../assets/Meeting.svg';
-import projectIcon from '../assets/Project.svg';
-import scriptIcon from '../assets/Script.svg';
-import storyboardIcon from '../assets/Storyboard.svg';
+import pipelineIcon from '../assets/icons/Pipeline.svg';
+import meetingIcon from '../assets/icons/Meeting.svg';
+import projectIcon from '../assets/icons/Project.svg';
+import scriptIcon from '../assets/icons/Script.svg';
+import storyboardIcon from '../assets/icons/Storyboard.svg';
 
 export const Sidebar: React.FC = () => {
 

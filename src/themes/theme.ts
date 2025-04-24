@@ -26,6 +26,9 @@ export const globalTheme: ThemeConfig = {
             itemMarginBlock: 15,
             itemMarginInline: 10,
             itemHoverBg: '#414141',
+        },
+        Button: {
+            textHoverBg: '#414141',
         }
     }
 }

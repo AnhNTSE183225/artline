@@ -1,0 +1,26 @@
+.space {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 80px;
+}
+
+.card {
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease-out;
+}
+
+.card:hover {
+    background-color: hsl(0, 0%, 40%);
+}
+
+.image {
+    width: 100%;
+}
+
+.row {
+    padding: 0 30px;
+}

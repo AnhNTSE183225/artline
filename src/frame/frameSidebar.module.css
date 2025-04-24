@@ -1,3 +1,13 @@
+.layout {
+    min-height: 100vh;
+}
+
+.sider {
+    position: fixed;
+    z-index: 1000;
+    height: 100vh;
+}
+
 .profile {
     width: 100%;
     margin: 30px 10px;
@@ -13,7 +23,17 @@
 }
 
 .header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
     display: flex;
     justify-content: end;
+    align-items: center;
     gap: 20px;
+    height: 50px;
+}
+
+.content {
+    margin-left: 300px;
+    margin-top: 50px;
 }
