@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import { Pipeline } from '../data/entity';
+import { Pipeline } from '../../data/entity';
 import { Col, Row, Space, Typography } from 'antd';
-import { getPipelines } from '../data/fakeData';
+import { getPipelines } from '../../data/fakeData';
 import s from './pagePipeline.module.css';
-import placeHolderThumbail from '../assets/placeholder169.jpg';
+import placeHolderThumbail from '../../assets/images/placeholder169.jpg';
+import { useNavigate } from 'react-router';
 const { Text } = Typography;
 
 export const PagePipeline: React.FC = () => {
 
     const [pipelines, setPipelines] = useState<Pipeline[]>([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -24,10 +26,10 @@ export const PagePipeline: React.FC = () => {
             <Row gutter={[10, 10]} className={s.row}>
                 {pipelines.map((pipeline) => (
                     <Col key={pipeline.id} md={8}>
-                        <Space direction='vertical' className={s.card}>
+                        <Space onClick={() => navigate(`/pipelines/${pipeline.id}`)} direction='vertical' className={s.card}>
                             <img className={s.image} src={placeHolderThumbail} alt="placeholder" />
-                            <Text style={{fontWeight: 600}}>{pipeline.name}</Text>
-                            <Text style={{fontWeight: 300}}>
+                            <Text style={{ fontWeight: 600 }}>{pipeline.name}</Text>
+                            <Text style={{ fontWeight: 300 }}>
                                 {pipeline.dateModified.format('hh:mm A')} | {pipeline.dateModified.format('ddd MM/DD')}
                             </Text>
                         </Space>

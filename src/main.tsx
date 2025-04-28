@@ -1,22 +1,25 @@
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Route, Routes } from 'react-router'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router'
 import { FrameSidebar } from './frame/FrameSidebar'
-import { PagePipeline } from './pages/PagePipeline'
-import { PageProject } from './pages/PageProject'
-import { PageMeeting } from './pages/PageMeeting'
-import { PageScript } from './pages/PageScript'
-import { PageStoryboard } from './pages/PageStoryboard'
-import { PageNotFound } from './pages/PageNotFound'
+import { PagePipeline } from './pages/pipeline/PagePipeline'
+import { PageProject } from './pages/project/PageProject'
+import { PageMeeting } from './pages/meeting/PageMeeting'
+import { PageScript } from './pages/script/PageScript'
+import { PageStoryboard } from './pages/storyboard/PageStoryboard'
+import { PageNotFound } from './pages/util/PageNotFound'
 import './main.css';
 import { ConfigProvider } from 'antd'
 import { globalTheme } from './themes/theme'
+import { PagePipelineDetail } from './pages/pipeline/PagePipelineDetail'
 
 createRoot(document.getElementById('root')!).render(
   <ConfigProvider theme={globalTheme}>
     <BrowserRouter>
       <Routes>
         <Route element={<FrameSidebar />} >
-          <Route path='/' element={<PagePipeline />} />
+          <Route path='/' element={<Navigate to='/pipelines' replace/>}/>
+          <Route path='/pipelines' element={<PagePipeline />} />
+          <Route path='/pipelines/:id' element={<PagePipelineDetail />} />
           <Route path='/projects' element={<PageProject />} />
           <Route path='/meetings' element={<PageMeeting />} />
           <Route path='/scripts' element={<PageScript />} />

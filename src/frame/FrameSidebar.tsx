@@ -1,5 +1,5 @@
 import React from 'react'
-import { Sidebar } from '../components/Sidebar'
+import { Sidebar } from '../components/sidebar/Sidebar'
 import { Avatar, Button, ConfigProvider, Layout, Space, theme, Typography } from 'antd'
 import Sider from 'antd/es/layout/Sider'
 import { Content, Header } from 'antd/es/layout/layout'
