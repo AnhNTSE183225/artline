@@ -1,5 +1,6 @@
 import dayjs from "dayjs";
 import { Pipeline } from "./entity";
+import { Node } from "@xyflow/react";
 
 // api/v1/pipelines
 export const getPipelines = async (): Promise<Pipeline[]> => {
@@ -73,6 +74,24 @@ export const getPipelines = async (): Promise<Pipeline[]> => {
             thumbnail: null,
             dateCreated: dayjs('2025-03-01'),
             dateModified: dayjs('2025-03-25'),
+        }
+    ];
+}
+
+export const getPipelineCanvas = async (pipelineId: number): Promise<Node[]> => {
+    if (pipelineId == -1) return [];
+    return [
+        {
+            id: '1',
+            position: { x: 10, y: 10 },
+            data: { label: `Hello Pipeline ${pipelineId}` },
+            type: 'pipeline',
+        },
+        {
+            id: '2',
+            position: { x: 20, y: 20 },
+            data: { label: `Hello Pipeline ${pipelineId}` },
+            type: 'pipeline',
         }
     ];
 }
