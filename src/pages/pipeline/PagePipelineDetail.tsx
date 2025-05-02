@@ -5,9 +5,13 @@ import '@xyflow/react/dist/style.css';
 import { addEdge, Background, BackgroundVariant, Controls, Edge, Node, ReactFlow, useEdgesState, useNodesState } from '@xyflow/react';
 import { PipelineNode } from '../../components/pipeline/PipelineNode';
 import { getPipelineCanvas } from '../../data/fakeData';
+import { PersonnelNode } from '../../components/pipeline/PersonnelNode/PersonnelNode';
+import { MeetingNode } from '../../components/pipeline/MeetingNode/MeetingNode';
 
 const nodeTypes = {
     pipeline: PipelineNode,
+    personnel: PersonnelNode,
+    meeting: MeetingNode
 }
 
 export const PagePipelineDetail: React.FC = () => {
