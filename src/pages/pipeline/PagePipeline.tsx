@@ -23,7 +23,7 @@ export const PagePipeline: React.FC = () => {
     return (
         <Space direction='vertical' className={s.space}>
             <Typography.Title level={4}>Pipeline Space</Typography.Title>
-            <Row gutter={[10, 10]} className={s.row}>
+            <Row gutter={[10, 10]}>
                 {pipelines.map((pipeline) => (
                     <Col key={pipeline.id} md={8}>
                         <Space onClick={() => navigate(`/pipelines/${pipeline.id}`)} direction='vertical' className={s.card}>

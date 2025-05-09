@@ -7,3 +7,8 @@ export interface Pipeline {
     dateCreated: Dayjs,
     dateModified: Dayjs
 }
+
+export interface Project {
+    title: string,
+    imageUrl: string
+}

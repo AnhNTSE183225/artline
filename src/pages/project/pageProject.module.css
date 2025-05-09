@@ -1,22 +1,21 @@
-.space {
+.layout {
     padding: 80px;
 }
 
-.card {
-    width: 100%;
+.projectCard {
+    background-color: transparent;
     border-radius: 8px;
     padding: 10px;
-    background-color: transparent;
-    cursor: pointer;
     transition: background-color 0.3s ease-out;
+    cursor: pointer;
 }
 
-.card:hover {
-    background-color: hsl(0, 0%, 40%);
-}
-
-.image {
+.projectImage {
     width: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
+}
+
+.projectCard:hover {
+    background-color: hsl(0, 0%, 40%);
 }

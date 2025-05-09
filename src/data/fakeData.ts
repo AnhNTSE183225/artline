@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { Pipeline } from "./entity";
+import { Pipeline, Project } from "./entity";
 import { Node } from "@xyflow/react";
 import { PersonnelNodeData } from "../components/pipeline/PersonnelNode/PersonnelNode";
 import { MeetingNodeData } from "../components/pipeline/MeetingNode/MeetingNode";
@@ -80,6 +80,8 @@ export const getPipelines = async (): Promise<Pipeline[]> => {
     ];
 }
 
+
+// api/v1/pipelines/{pipelineId}
 export const getPipelineCanvas = async (pipelineId: number): Promise<Node[]> => {
     if (pipelineId == -1) return [];
     return [
@@ -144,5 +146,22 @@ export const getPipelineCanvas = async (pipelineId: number): Promise<Node[]> => 
             data: { label: `Hello Pipeline ${pipelineId}` },
             type: 'pipeline',
         }
+    ];
+}
+
+export const getProjects = async (): Promise<Project[]> => {
+    return [
+        {
+            title: "SweetMayhem",
+            imageUrl: "http://115.79.225.207/public/banh-sau-rieng-ngan-lop.jpg",
+        },
+        {
+            title: "Short Animation: Born too soon",
+            imageUrl: "http://115.79.225.207/public/banhsaurieng.jpg",
+        },
+        {
+            title: "Short Animation : TinkerFlake",
+            imageUrl: "http://115.79.225.207/public/dasd.jpg",
+        },
     ];
 }
