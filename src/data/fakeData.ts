@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { Pipeline, Project } from "./entity";
+import { MeetingSpace, Pipeline, Project } from "./entity";
 import { Node } from "@xyflow/react";
 import { PersonnelNodeData } from "../components/pipeline/PersonnelNode/PersonnelNode";
 import { MeetingNodeData } from "../components/pipeline/MeetingNode/MeetingNode";
@@ -149,6 +149,7 @@ export const getPipelineCanvas = async (pipelineId: number): Promise<Node[]> => 
     ];
 }
 
+// api/v1/projects
 export const getProjects = async (): Promise<Project[]> => {
     return [
         {
@@ -163,5 +164,41 @@ export const getProjects = async (): Promise<Project[]> => {
             title: "Short Animation : TinkerFlake",
             imageUrl: "http://115.79.225.207/public/dasd.jpg",
         },
+    ];
+}
+
+// api/v1/meeting-spaces
+export const getMeetingSpaces = async (): Promise<MeetingSpace[]> => {
+    return [
+        {
+            title: "Weekly Sync",
+            dateCreated: dayjs("2025-05-01T10:00:00"),
+            thumbnail: null,
+            dateModified: dayjs("2025-05-02T09:30:00")
+        },
+        {
+            title: "Design Review",
+            dateCreated: dayjs("2025-04-25T14:00:00"),
+            thumbnail: null,
+            dateModified: dayjs("2025-05-01T15:45:00")
+        },
+        {
+            title: "Sprint Planning",
+            dateCreated: dayjs("2025-04-20T09:00:00"),
+            thumbnail: null,
+            dateModified: dayjs("2025-04-29T10:00:00")
+        },
+        {
+            title: "Client Demo",
+            dateCreated: dayjs("2025-03-30T16:00:00"),
+            thumbnail: null,
+            dateModified: dayjs("2025-04-01T17:30:00")
+        },
+        {
+            title: "Retrospective",
+            dateCreated: dayjs("2025-04-15T11:30:00"),
+            thumbnail: null,
+            dateModified: dayjs("2025-04-16T12:00:00")
+        }
     ];
 }

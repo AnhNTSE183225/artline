@@ -12,3 +12,10 @@ export interface Project {
     title: string,
     imageUrl: string
 }
+
+export interface MeetingSpace {
+    title: string,
+    dateCreated: Dayjs,
+    thumbnail?: string | null,
+    dateModified: Dayjs
+}

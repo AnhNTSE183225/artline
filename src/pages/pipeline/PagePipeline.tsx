@@ -25,7 +25,7 @@ export const PagePipeline: React.FC = () => {
             <Typography.Title level={4}>Pipeline Space</Typography.Title>
             <Row gutter={[10, 10]}>
                 {pipelines.map((pipeline) => (
-                    <Col key={pipeline.id} md={8}>
+                    <Col key={pipeline.id} xs={24} sm={12} md={8}>
                         <Space onClick={() => navigate(`/pipelines/${pipeline.id}`)} direction='vertical' className={s.card}>
                             <img className={s.image} src={placeHolderThumbail} alt="placeholder" />
                             <Text style={{ fontWeight: 600 }}>{pipeline.name}</Text>

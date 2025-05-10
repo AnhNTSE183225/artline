@@ -1,0 +1,25 @@
+.layout {
+    padding: 80px;
+}
+
+.thumbnail {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.meetingSpaceCard {
+    border-radius: 8px;
+    padding: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease-out;
+}
+
+.meetingSpaceCard:hover {
+    background-color: hsl(0, 0%, 40%);
+}
+
+.actionSection {
+    padding-top: 20px;
+}

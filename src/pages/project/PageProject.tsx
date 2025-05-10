@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Project } from '../../data/entity'
 import { getProjects } from '../../data/fakeData';
-import { Card, Col, Row, Space, Typography } from 'antd';
+import { Button, Col, Row, Space, Typography } from 'antd';
 const { Text } = Typography;
 import s from './pageProject.module.css';
+import { RightOutlined } from '@ant-design/icons';
 
 export const PageProject: React.FC = () => {
 
@@ -20,11 +21,16 @@ export const PageProject: React.FC = () => {
 
     return (
         <Space className={s.layout} direction='vertical'>
-            <Typography.Title level={4}>Project</Typography.Title>
+            <Space direction='horizontal'>
+                <Typography.Title level={4} className={s.title}>Project</Typography.Title>
+                <Button className={s.titleDropdown}>
+                    <RightOutlined />
+                </Button>
+            </Space>
             <Row gutter={[10, 10]}>
                 {
                     projects.map((p, _) => (
-                        <Col key={_} md={8}>
+                        <Col key={_} xs={24} sm={12} md={8}>
                             <Space direction='vertical' className={s.projectCard}>
                                 <img className={s.projectImage} src={p.imageUrl} alt={p.imageUrl} />
                                 <Text>{p.title}</Text>
